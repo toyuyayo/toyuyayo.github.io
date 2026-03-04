@@ -238,3 +238,9 @@ button{
     width:fit-content;
     margin:15px auto;
 }
+
+#sidePanel button{
+    width:200px;        /* ← 好きな幅（180〜220くらい） */
+    display:block;
+    margin:15px auto;
+}
