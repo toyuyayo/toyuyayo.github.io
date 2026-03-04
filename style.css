@@ -80,6 +80,10 @@ button{
     width:420px;
     text-align:center;
     flex-shrink:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;   /* ← 追加 */
 }
 
 #description{
