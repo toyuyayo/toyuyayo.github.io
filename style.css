@@ -1,0 +1,143 @@
+/* ======================
+   基本設定
+====================== */
+
+html{
+    overflow-y: scroll;   /* スクロールバー分の横ズレ防止 */
+}
+
+body{
+    background:#111;
+    color:white;
+    font-family:sans-serif;
+    margin:0;
+}
+
+/* ======================
+   地図（完全中央）
+====================== */
+
+#map{
+    position:relative;
+    width:800px;
+    margin:40px auto;   /* ← これが中央固定の本体 */
+}
+
+#map img{
+    width:100%;
+    display:block;
+}
+
+/* ======================
+   アンテナ
+====================== */
+
+.antenna{
+    position:absolute;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background:transparent;
+    cursor:pointer;
+    transition:0.2s;
+    transform:translate(-50%, -50%);
+}
+
+.antenna.active{
+    background:red;
+}
+
+.antenna.absent{
+    background:rgba(0,150,255,0.9);
+}
+
+/* ======================
+   結果エリア
+====================== */
+
+#result{
+    text-align:center;
+    margin-top:30px;
+}
+
+#result img{
+    width:220px;
+    margin:10px;
+    cursor:pointer;
+}
+
+/* ======================
+   ボタン
+====================== */
+
+button{
+    padding:8px 20px;
+    margin:15px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* ======================
+   右側パネル（固定）
+====================== */
+
+#sidePanel{
+    position:fixed;
+    top:50%;
+    right:6%;
+    transform:translateY(-50%);
+    width:360px;
+    text-align:center;
+}
+
+#description{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:30px;
+    color:#ddd;
+}
+
+#count{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+/* ======================
+   モーダル
+====================== */
+
+#modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+#modal img{
+    max-width:90%;
+    max-height:90%;
+}
+
+#closeBtn{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:80px;
+    height:80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+    background:rgba(0,0,0,0.3);
+    border-radius:50%;
+}
+
+h1{
+    text-align:center;
+    margin-top:20px;
+}
