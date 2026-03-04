@@ -20,6 +20,7 @@ body{
 #map{
     position:relative;
     width:800px;
+    flex-shrink:0;
 }
 
 #map img{
@@ -83,6 +84,7 @@ button{
 #sidePanel{
     width:360px;
     text-align:center;
+    flex-shrink:0;
 }
 
 #description{
@@ -143,7 +145,7 @@ h1{
     align-items:flex-start;
     gap:60px;
     margin-top:40px;
-    flex-wrap:wrap;
+    width:100%;
 }
 
 @media (max-width:1300px){
