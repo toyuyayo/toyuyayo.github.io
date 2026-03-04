@@ -162,3 +162,27 @@ h1{
 body{
     min-width:1300px;
 }
+
+.homeContainer{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    margin-top:60px;
+    flex-wrap:wrap;
+}
+
+.mapCard{
+    text-decoration:none;
+    color:white;
+    text-align:center;
+    transition:0.3s;
+}
+
+.mapCard img{
+    width:300px;
+    border-radius:10px;
+}
+
+.mapCard:hover{
+    transform:scale(1.05);
+}
