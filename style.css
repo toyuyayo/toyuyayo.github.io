@@ -11,6 +11,7 @@ body{
     color:white;
     font-family:sans-serif;
     margin:0;
+    min-width:1300px;
 }
 
 /* ======================
@@ -157,10 +158,6 @@ h1{
     #sidePanel{
         margin-top:40px;
     }
-}
-
-body{
-    min-width:1300px;
 }
 
 .homeContainer{
