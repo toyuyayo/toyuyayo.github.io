@@ -80,10 +80,6 @@ button{
     width:420px;
     text-align:center;
     flex-shrink:0;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;   /* ← 追加 */
 }
 
 #description{
@@ -143,7 +139,7 @@ button{
     justify-content:center;
     align-items:flex-start;
     gap:60px;
-    margin-top:20px;
+    margin-top:10px;
     width:100%;
 }
 
