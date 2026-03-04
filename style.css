@@ -168,22 +168,42 @@ h1{
     flex-wrap:wrap;
 }
 
-.mapCard{
+/* ======================
+   トップページ 新デザイン
+====================== */
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:40px;
+    max-width:1400px;
+    margin:120px auto;
+}
+
+.mapItem{
     text-decoration:none;
     color:white;
     text-align:center;
     transition:0.3s;
 }
 
-.mapCard img{
-    width:300px;
-    border-radius:10px;
+.mapItem img{
+    width:100%;
+    border-radius:20px;
+    display:block;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    transition:0.3s;
 }
 
-.mapCard:hover{
+.mapTitle{
+    margin-top:15px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.mapItem:hover img{
     transform:scale(1.05);
 }
-
 /* ======================
    トップページ用グリッド
 ====================== */
