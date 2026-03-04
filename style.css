@@ -186,3 +186,39 @@ body{
 .mapCard:hover{
     transform:scale(1.05);
 }
+
+/* ======================
+   トップページ用グリッド
+====================== */
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:20px;
+    max-width:1400px;
+    margin:60px auto;
+}
+
+.card{
+    height:180px;
+    background-size:cover;
+    background-position:center;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.empty{
+    background:transparent;
+    pointer-events:none;
+}
