@@ -242,3 +242,11 @@ h1{
     background:transparent;
     pointer-events:none;
 }
+
+.pageTitle{
+    text-align:center;
+    font-size:32px;
+    margin-top:80px;
+    margin-bottom:60px;
+    letter-spacing:2px;
+}
