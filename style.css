@@ -235,7 +235,8 @@ button{
 
 #sidePanel button{
     display:block;
-    min-width:190px;
-    padding:10px 20px;
+    width:230px;
+    padding:12px 0;   /* 左右paddingなしにすると綺麗 */
     margin:15px auto;
 }
+
