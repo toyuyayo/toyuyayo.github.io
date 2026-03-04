@@ -20,7 +20,6 @@ body{
 #map{
     position:relative;
     width:800px;
-    margin:40px auto;   /* ← これが中央固定の本体 */
 }
 
 #map img{
@@ -82,10 +81,6 @@ button{
 ====================== */
 
 #sidePanel{
-    position:fixed;
-    top:50%;
-    right:6%;
-    transform:translateY(-50%);
     width:360px;
     text-align:center;
 }
@@ -140,4 +135,12 @@ button{
 h1{
     text-align:center;
     margin-top:20px;
+}
+
+#mainWrapper{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:60px;
+    margin-top:40px;
 }
