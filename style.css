@@ -11,11 +11,6 @@ body{
     color:white;
     font-family:sans-serif;
     margin:0;
-
-    height:100vh;              /* 画面いっぱい */
-    display:flex;
-    flex-direction:column;
-    justify-content:center;    /* 縦中央 */
 }
 /* ======================
    地図（完全中央）
@@ -209,41 +204,6 @@ h1{
 
 .mapItem:hover img{
     transform:scale(1.05);
-}
-/* ======================
-   トップページ用グリッド
-====================== */
-
-.container{
-    display:grid;
-    grid-template-columns:repeat(5, 1fr);
-    gap:40px;
-    max-width:1400px;
-    margin:120px auto;
-}
-
-.card{
-    height:200px;
-    background-size:cover;
-    background-position:center;
-    border-radius:12px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    color:white;
-    font-size:22px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:scale(1.05);
-}
-
-.empty{
-    background:transparent;
-    pointer-events:none;
 }
 
 .pageTitle{
