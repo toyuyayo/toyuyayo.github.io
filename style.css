@@ -189,8 +189,9 @@ h1{
 
 .mapItem img{
     width:100%;
-    height:220px;           /* ← 高さを固定 */
-    object-fit:cover;       /* ← 画像を自動トリミング */
+    aspect-ratio:1 / 1;   /* 正方形 */
+    object-fit:cover;     /* はみ出しカット */
+    object-position:center; /* 常に中央 */
     border-radius:20px;
     display:block;
     box-shadow:0 10px 30px rgba(0,0,0,0.6);
