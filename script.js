@@ -10,25 +10,35 @@ document.getElementById("map").addEventListener("click", function(e){
     console.log("top:" + y + "px; left:" + x + "px;");
 });
 
-// 🔥 アンテナ3状態切替
 document.querySelectorAll(".antenna").forEach(el=>{
     el.addEventListener("click",function(e){
-        e.stopPropagation();
+
         const id = this.dataset.id;
 
-        if(selected.includes(id)){
-            selected = selected.filter(s => s !== id);
-            excluded.push(id);
+        const result = prompt("選択してください\n1: あり\n2: なし");
+
+        if(result === "1"){
+
+            excluded = excluded.filter(x => x !== id);
+
+            if(!selected.includes(id)){
+                selected.push(id);
+            }
+
+            this.classList.remove("absent");
+            this.classList.add("active");
+
+        }else if(result === "2"){
+
+            selected = selected.filter(x => x !== id);
+
+            if(!excluded.includes(id)){
+                excluded.push(id);
+            }
+
             this.classList.remove("active");
             this.classList.add("absent");
 
-        }else if(excluded.includes(id)){
-            excluded = excluded.filter(s => s !== id);
-            this.classList.remove("absent");
-
-        }else{
-            selected.push(id);
-            this.classList.add("active");
         }
 
         updateResult();
