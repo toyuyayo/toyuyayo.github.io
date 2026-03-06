@@ -250,7 +250,7 @@ z-index:1000;
 }
 
 #choiceMenu button{
-display:block;
-margin:2px 0;
-width:60px;
+    display:inline-block;
+    padding:5px 10px;
+    margin:2px;
 }
