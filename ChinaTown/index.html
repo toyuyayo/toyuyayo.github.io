@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>第五人格解読機配置</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div id="mainWrapper">
+
+<div id="map">
+    <img src="ChinaTown.png">
+
+    <div class="antenna" style="top:846px; left:200px" data-id="A"></div>
+    <div class="antenna" style="top:889px; left:456px" data-id="B"></div>
+    <div class="antenna" style="top:895px; left:684px" data-id="C"></div>
+    <div class="antenna" style="top:716px; left:793px" data-id="D"></div>
+    <div class="antenna" style="top:617px; left:264px" data-id="E"></div>
+    <div class="antenna" style="top:572px; left:510px" data-id="F"></div>
+    <div class="antenna" style="top:406px; left:562px" data-id="G"></div>
+    <div class="antenna" style="top:368px; left:664px" data-id="H"></div>
+    <div class="antenna" style="top:280px; left:174px" data-id="I"></div>
+    <div class="antenna" style="top:329px; left:274px" data-id="J"></div>
+    <div class="antenna" style="top:95px;  left:433px" data-id="K"></div>
+    <div class="antenna" style="top:139px; left:643px" data-id="L"></div>
+</div>
+
+<div id="sidePanel">
+
+<h1>中華街</h1>
+
+ <div id="description">
+        地図上の暗号機をクリックしてください。<br>
+        １回クリック：赤＝その場所にある<br>
+        ２回クリック：青＝その場所にない<br>
+        条件に合う配置だけが下に表示されます。<br>
+	下の画像をクリックすると拡大されます。
+    </div>
+
+        <h2 id="count">残り5通り</h2>
+        <button id="resetBtn">リセット</button>
+        <button onclick="location.href='../index.html'">TOPへ</button>
+    </div>
+</div>
+
+<div id="result"></div>
+
+<!-- 画像拡大用モーダル -->
+<div id="modal">
+    <span id="closeBtn">×</span>
+    <img id="modalImg">
+</div>
+
+<script>
+
+const patterns = [
+ { name:"1.png", antennas:["A","B","C","F","H","J","L"] },
+ { name:"2.png", antennas:["B","C","D","E","G","I","L"] },
+ { name:"3.png", antennas:["A","B","D","E","G","J","L"] },
+ { name:"4.png", antennas:["A","B","C","D","G","I","L"] },
+ { name:"5.png", antennas:["B","C","E","G","I","K","L"] }
+];
+
+</script>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
