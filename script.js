@@ -2,6 +2,12 @@ let selected = [];
 let excluded = [];
 let autoOpened = false;
 
+let currentAntenna = null;
+
+const choiceMenu = document.getElementById("choiceMenu");
+const chooseYes = document.getElementById("chooseYes");
+const chooseNo = document.getElementById("chooseNo");
+
 // 🔥 座標取得用
 document.getElementById("map").addEventListener("click", function(e){
     const rect = this.getBoundingClientRect();
@@ -13,35 +19,14 @@ document.getElementById("map").addEventListener("click", function(e){
 document.querySelectorAll(".antenna").forEach(el=>{
     el.addEventListener("click",function(e){
 
-        const id = this.dataset.id;
+        e.stopPropagation();
 
-        const result = prompt("選択してください\n1: あり\n2: なし");
+        currentAntenna = this;
 
-        if(result === "1"){
+        choiceMenu.style.left = e.pageX + "px";
+        choiceMenu.style.top = e.pageY + "px";
+        choiceMenu.style.display = "block";
 
-            excluded = excluded.filter(x => x !== id);
-
-            if(!selected.includes(id)){
-                selected.push(id);
-            }
-
-            this.classList.remove("absent");
-            this.classList.add("active");
-
-        }else if(result === "2"){
-
-            selected = selected.filter(x => x !== id);
-
-            if(!excluded.includes(id)){
-                excluded.push(id);
-            }
-
-            this.classList.remove("active");
-            this.classList.add("absent");
-
-        }
-
-        updateResult();
     });
 });
 
@@ -107,3 +92,45 @@ document.getElementById("resetBtn").addEventListener("click", function(){
 });
 
 updateResult();
+
+chooseYes.addEventListener("click",function(){
+
+    const id = currentAntenna.dataset.id;
+
+    excluded = excluded.filter(x => x !== id);
+
+    if(!selected.includes(id)){
+        selected.push(id);
+    }
+
+    currentAntenna.classList.remove("absent");
+    currentAntenna.classList.add("active");
+
+    choiceMenu.style.display = "none";
+
+    updateResult();
+
+});
+
+chooseNo.addEventListener("click",function(){
+
+    const id = currentAntenna.dataset.id;
+
+    selected = selected.filter(x => x !== id);
+
+    if(!excluded.includes(id)){
+        excluded.push(id);
+    }
+
+    currentAntenna.classList.remove("active");
+    currentAntenna.classList.add("absent");
+
+    choiceMenu.style.display = "none";
+
+    updateResult();
+
+});
+
+document.addEventListener("click",function(){
+    choiceMenu.style.display = "none";
+});
