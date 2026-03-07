@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>第五人格解読機配置</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div id="mainWrapper">
+
+<div id="map">
+    <img src="EverSleepingTown.png">
+
+    <div class="antenna" style="top:88px; left:252.79999542236328px" data-id="A"></div>
+    <div class="antenna" style="top:203px; left:264.7999954223633px" data-id="B"></div>
+    <div class="antenna" style="top:260px; left:190.79999542236328px" data-id="C"></div>
+    <div class="antenna" style="top:107px; left:467.7999954223633px" data-id="D"></div>
+    <div class="antenna" style="top:182px; left:606.7999954223633px" data-id="E"></div>
+    <div class="antenna" style="top:271px; left:637.7999954223633px" data-id="F"></div>
+    <div class="antenna" style="top:311px; left:483.7999954223633px" data-id="G"></div>
+    <div class="antenna" style="top:396px; left:418.7999954223633px" data-id="H"></div>
+    <div class="antenna" style="top:511px; left:111.79999542236328px" data-id="I"></div>
+    <div class="antenna" style="top:558px; left:296.7999954223633px" data-id="J"></div>
+    <div class="antenna" style="top:550px; left:572.7999954223633px" data-id="K"></div>
+    <div class="antenna" style="top:599px; left:529.7999954223633px" data-id="L"></div>
+</div>
+
+<div id="sidePanel">
+
+<h1>永眠町</h1>
+
+ <div id="description">
+        地図上の暗号機をクリックしてください。<br>
+        赤＝その場所にある<br>
+        青＝その場所にない<br>
+        条件に合う配置だけが下に表示されます。<br>
+	下の画像をクリックすると拡大されます。
+    </div>
+
+        <h2 id="count">残り5通り</h2>
+        <button id="resetBtn">リセット</button>
+        <button onclick="location.href='../index.html'">TOPへ</button>
+    </div>
+</div>
+
+<div id="result"></div>
+
+<div id="choiceMenu">
+<button id="chooseYes">あり</button>
+<button id="chooseNo">なし</button>
+</div>
+
+<!-- 画像拡大用モーダル -->
+<div id="modal">
+    <span id="closeBtn">×</span>
+    <img id="modalImg">
+</div>
+
+<script>
+
+const patterns = [
+ { name:"1.png", antennas:["A","D","F","H","I","J","L"] },
+ { name:"2.png", antennas:["A","B","F","G","I","J","L"] },
+ { name:"3.png", antennas:["B","D","E","H","I","J","L"] },
+ { name:"4.png", antennas:["A","C","E","G","H","J","K"] },
+ { name:"5.png", antennas:["C","D","F","H","I","J","K"] }
+];
+
+</script>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
