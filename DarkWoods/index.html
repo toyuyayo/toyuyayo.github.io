@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>第五人格解読機配置</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div id="mainWrapper">
+
+<div id="map">
+    <img src="DarkWoods.png">
+
+    <div class="antenna" style="top:146.63999938964844px; left:619.1999816894531px" data-id="A"></div>
+    <div class="antenna" style="top:333.6399841308594px; left:651.3199768066406px" data-id="B"></div>
+    <div class="antenna" style="top:500.6399841308594px; left:655.3199768066406px" data-id="C"></div>
+    <div class="antenna" style="top:581.6400146484375px; left:524.1999816894531px" data-id="D"></div>
+    <div class="antenna" style="top:193.63999938964844px; left:451.1600036621094px" data-id="E"></div>
+    <div class="antenna" style="top:374.6399841308594px; left:418.1600036621094px" data-id="F"></div>
+    <div class="antenna" style="top:412.36000061035156px; left:296.7200012207031px" data-id="G"></div>
+    <div class="antenna" style="top:486.8000183105469px; left:268.933349609375px" data-id="H"></div>
+    <div class="antenna" style="top:128px; left:204.40000915527344px" data-id="I"></div>
+    <div class="antenna" style="top:201px; left:240.72000122070312px" data-id="J"></div>
+    <div class="antenna" style="top:317.3199996948242px; left:69.4399995803833px" data-id="K"></div>
+    <div class="antenna" style="top:472.20001220703125px; left:101.86666870117188px" data-id="L"></div>
+</div>
+
+<div id="sidePanel">
+
+<h1>罪の森</h1>
+
+ <div id="description">
+        地図上の暗号機をクリックしてください。<br>
+        赤＝その場所にある<br>
+        青＝その場所にない<br>
+        条件に合う配置だけが下に表示されます。<br>
+	下の画像をクリックすると拡大されます。
+    </div>
+
+        <h2 id="count">残り5通り</h2>
+        <button id="resetBtn">リセット</button>
+        <button onclick="location.href='../index.html'">TOPへ</button>
+    </div>
+</div>
+
+<div id="result"></div>
+
+<div id="choiceMenu">
+<button id="chooseYes">あり</button>
+<button id="chooseNo">なし</button>
+</div>
+
+<!-- 画像拡大用モーダル -->
+<div id="modal">
+    <span id="closeBtn">×</span>
+    <img id="modalImg">
+</div>
+
+<script>
+
+const patterns = [
+ { name:"1.png", antennas:["A","B","C","F","H","J","L"] },
+ { name:"2.png", antennas:["B","C","D","E","G","I","L"] },
+ { name:"3.png", antennas:["A","B","D","E","G","J","L"] },
+ { name:"4.png", antennas:["A","B","C","D","G","I","L"] },
+ { name:"5.png", antennas:["B","C","E","G","I","K","L"] }
+];
+
+</script>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
