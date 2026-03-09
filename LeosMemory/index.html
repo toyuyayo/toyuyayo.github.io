@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>第五人格解読機配置</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div id="mainWrapper">
+
+<div id="map">
+    <img src="LeosMemory.png">
+
+    <div class="antenna" style="top:90px; left:468.7999954223633px" data-id="A"></div>
+    <div class="antenna" style="top:113px; left:307.7999954223633px" data-id="B"></div>
+    <div class="antenna" style="top:176px; left:633.7999954223633px" data-id="C"></div>
+    <div class="antenna" style="top:245px; left:184.79999542236328px" data-id="D"></div>
+    <div class="antenna" style="top:363px; left:441.7999954223633px" data-id="E"></div>
+    <div class="antenna" style="top:425px; left:653.7999954223633px" data-id="F"></div>
+    <div class="antenna" style="top:487px; left:402.7999954223633px" data-id="G"></div>
+    <div class="antenna" style="top:508px; left:159.79999542236328px" data-id="H"></div>
+    <div class="antenna" style="top:576px; left:522.7999954223633px" data-id="I"></div>
+    <div class="antenna" style="top:589px; left:280.7999954223633px" data-id="J"></div>
+    <div class="antenna" style="top:623px; left:644.7999954223633px" data-id="K"></div>
+</div>
+
+<div id="sidePanel">
+
+<h1>レオの思い出</h1>
+
+ <div id="description">
+        地図上の暗号機をクリックしてください。<br>
+        赤＝その場所にある<br>
+        青＝その場所にない<br>
+        条件に合う配置だけが下に表示されます。<br>
+	下の画像をクリックすると拡大されます。
+    </div>
+
+        <h2 id="count">残り5通り</h2>
+        <button id="resetBtn">リセット</button>
+        <button onclick="location.href='../index.html'">TOPへ</button>
+    </div>
+</div>
+
+<div id="result"></div>
+
+<div id="choiceMenu">
+<button id="chooseYes">あり</button>
+<button id="chooseNo">なし</button>
+</div>
+
+<!-- 画像拡大用モーダル -->
+<div id="modal">
+    <span id="closeBtn">×</span>
+    <img id="modalImg">
+</div>
+
+<script>
+
+const patterns = [
+ { name:"1.png", antennas:["B","C","D","F","G","H","I"] },
+ { name:"2.png", antennas:["A","B","D","F","G","J","K"] },
+ { name:"3.png", antennas:["B","C","E","F","H","I","J"] },
+ { name:"4.png", antennas:["A","C","D","E","I","J","K"] },
+ { name:"5.png", antennas:["A","C","D","G","H","I","K"] }
+];
+
+</script>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
