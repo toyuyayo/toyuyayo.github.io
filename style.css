@@ -168,12 +168,12 @@ button{
 
 .container{
     display:grid;
-    grid-template-columns:repeat(5, 1fr);
+    grid-template-columns:repeat(auto-fit, 220px);
+    justify-content:center;
     gap:40px;
     max-width:1400px;
     margin:20px auto;
 }
-
 .mapItem{
     text-decoration:none;
     color:white;
@@ -253,15 +253,6 @@ z-index:1000;
     display:inline-block;
     padding:5px 10px;
     margin:2px;
-}
-
-.card{
-  width:300px;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 2px 6px rgba(0,0,0,0.2);
-  text-align:left;
-  font-family:sans-serif;
 }
 
 .card img{
